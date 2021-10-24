@@ -7,5 +7,6 @@ create table Login (
 create table Users (
 	User_id serial primary key, /* serial auto increments value */
 	User_Name VARCHAR(100),
-	Email text unique NOT null
+	Email text unique NOT null,
+	Joined TIMESTAMP not null
 );
