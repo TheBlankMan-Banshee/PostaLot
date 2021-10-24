@@ -5,8 +5,7 @@ const handleRegister = (req,res,db,bcrypt) => {
     if (!email || !name || !password) { // if either of the objects doesn't exist
        return res.status(400).json('All fields must be filled in');
     }
-    bcrypt.hash(password, null, null, function(err, hash) {
-        // Store hash in your password DB.
+    bcrypt.hash(password, null, function(err, hash) {
         hashed = hash;
     });
     db.transaction(trx => { // transaction knex function
