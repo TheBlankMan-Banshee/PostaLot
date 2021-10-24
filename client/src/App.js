@@ -53,7 +53,7 @@ class App extends Component {
   }
 
   onRouteChange = (route) => {
-    if (route === 'signOut') {
+    if (route === 'signout') {
       this.setState(initialState);
     } else if (route === 'Home') {
       this.setState({isSignedIn: true});
@@ -80,7 +80,7 @@ class App extends Component {
           <div>
               POSTALOT being maintained...
           </div> : (
-            route === 'signIn' ?
+            route === 'signin' ?
             <SignIn loadUser={this.loadUser} onRouteChange={this.onRouteChange}/> :
             <Register loadUser={this.loadUser} onRouteChange={this.onRouteChange}/>
           )

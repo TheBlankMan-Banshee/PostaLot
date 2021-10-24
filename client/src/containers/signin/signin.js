@@ -21,7 +21,7 @@ class SignIn extends Component {
 
     // Event on sign In button
     onSubmitSignIn = () => {
-        fetch('http://localhost:3000/signIn', { // fetch implements by default the GET method
+        fetch('http://localhost:3000/signin', { // fetch implements by default the GET method
             method: 'post',
             headers: {'Content-Type':'application/json'},
             body: JSON.stringify({ // send JSON object back as string to server
@@ -71,7 +71,7 @@ class SignIn extends Component {
                             value="Sign in"/>
                         </div>
                         <div className="lh-copy mt3">
-                            <p onClick={() => onRouteChange('Register')} className="f6 link dim black db pointer">Register</p>
+                            <p onClick={() => onRouteChange('register')} className="f6 link dim black db pointer">Register</p>
                         </div>
                     </div>
                 </main>
