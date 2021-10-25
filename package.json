@@ -1,0 +1,23 @@
+{
+  "name": "PostaLot",
+  "version": "1.0.0",
+  "description": "A React app for managing user contents and albums",
+  "main": "index.js",
+  "scripts": {
+    "frontend": "cd client && npm start",
+    "backend": "cd server && npm start",
+    "dev": "concurrently --kill-others-onfail 'npm run backend' 'npm run frontend'  ",
+    "heroku-postbuild": "cd server && npm install && npm run build && cd client && npm install && npm run build "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheBlankMan-Banshee/PostaLot.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TheBlankMan-Banshee/PostaLot/issues"
+  },
+  "homepage": "https://github.com/TheBlankMan-Banshee/PostaLot#readme"
+}
