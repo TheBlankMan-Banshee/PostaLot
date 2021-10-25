@@ -4,7 +4,8 @@
   "description": "A React app for managing user contents and albums",
   "main": "index.js",
   "engines" : {
-     "node" : ">=14.18.1" 
+     "node" : "14.18.x",
+     "npm" :  "6.x.x"
   } ,
   "scripts": {
     "frontend": "cd client && npm start",
