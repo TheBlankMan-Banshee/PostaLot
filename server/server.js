@@ -2,8 +2,10 @@ const express = require('express');
 const bcrypt = require('bcrypt');
 const cors = require('cors'); 
 const knex = require('knex'); 
-const register = require('./server/controllers/register');
-const signIn = require('./server/controllers/signin');
+//const register = require('./server/controllers/register');
+const register = require('./controllers/register');
+//const signIn = require('./server/controllers/signin');
+const signIn = require('./controllers/signin');
 require('dotenv').config();
 
 const PORT = process.env.PORT;
