@@ -8,7 +8,7 @@
     "npm": "6.x.x"
   },
   "dependencies": {
-    "concurrently": "6.3.0",
+    "concurrently": "^6.3.0",
     "bcrypt": "^5.0.1",
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
@@ -22,7 +22,9 @@
     "start": "node server.js",
     "frontStart": "cd client && npm start",
     "frontSetup": "cd client && npm install && npm run build",
-    "build": "npm run frontSetup && npm run frontStart"
+    "backStart":"cd server && npm start",
+    "backSetup": "cd server && npm install && npm run build",
+    "build": "npm run frontSetup && npm run frontStart && npm run backSetup && npm run backStart"
   },
   "repository": {
     "type": "git",
