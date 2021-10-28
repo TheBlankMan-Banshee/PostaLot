@@ -16,7 +16,7 @@
     "frontSetup": "cd client && npm install && npm run build",
     "backStart":"cd server && npm start",
     "backSetup": "cd server && npm install && npm run build",
-    "build": "npm run frontSetup && npm run frontStart && npm run backSetup && npm run backStart"
+    "build": "concurrently 'npm run frontSetup && npm run frontStart'  'npm run backSetup && npm run backStart'"
   },
   "repository": {
     "type": "git",
