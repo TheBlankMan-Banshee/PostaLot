@@ -21,7 +21,7 @@
   "scripts": {
     "start": "node server.js",
     "frontStart": "cd client && npm start",
-    "frontSetup": "cd client && npm install && npm run build ",
+    "frontSetup": "cd client && npm install && npm run build",
     "build": "npm run frontSetup && npm run frontStart"
   },
   "repository": {
