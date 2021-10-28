@@ -3,13 +3,12 @@
   "version": "1.0.0",
   "description": "A React app for managing user contents and albums",
   "main": "server.js",
-  
-  "engines" : {
-     "node" : "14.18.x",
-     "npm" :  "6.x.x"
-  } ,
+  "engines": {
+    "node": "14.18.x",
+    "npm": "6.x.x"
+  },
   "dependencies": {
-    "concurrently":  "6.3.0",
+    "concurrently": "6.3.0",
     "bcrypt": "^5.0.1",
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
@@ -21,10 +20,9 @@
   },
   "scripts": {
     "start": "node server.js",
-    "frontend": "cd client && npm start",
+    "frontStart": "cd client && npm start",
     "frontSetup": "cd client && npm install && npm run build ",
-    "dev": "concurrently --kill-others-on-fail 'npm run frontend'  ",
-    "heroku-postbuild": "concurrently --kill-others-on-fail 'npm run frontSetup'  " 
+    "build": "npm run frontSetup && npm run frontStart"
   },
   "repository": {
     "type": "git",
