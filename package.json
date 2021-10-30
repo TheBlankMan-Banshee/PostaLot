@@ -16,7 +16,7 @@
     "frontSetup": "cd client && npm install && npm run build",
     "backStart": "cd server && npm start",
     "backSetup": "cd server && npm install",
-    "build": "concurrently \"npm run backSetup\" \"npm run frontSetup\"",
+    "heroku-build": "concurrently \"npm run backSetup\" \"npm run frontSetup\"",
     "heroku-postbuild":"concurrently \"npm run backStart\" \"npm run frontStart\""
   },
   "repository": {
