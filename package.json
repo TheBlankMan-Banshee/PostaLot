@@ -11,12 +11,12 @@
     "concurrently": "^6.3.0"
   },
   "scripts": {
-    "start": " npm run backStart && npm run frontStart ",
+    "start": " npm run backStart",
     "frontStart": "cd client && npm start",
     "frontSetup": "cd client && npm install && npm run build",
     "backStart": "cd server && npm start",
     "backSetup": "cd server && npm install",
-    "heroku-postbuild": "concurrently \"npm run backSetup\" \"npm run frontSetup\""
+    "heroku-postbuild": "concurrently \"npm run backSetup\" \"npm run frontSetup && npm run frontStart\""
   },
   "repository": {
     "type": "git",
