@@ -11,7 +11,7 @@
     "concurrently": "^6.3.0"
   },
   "scripts": {
-    "start": "concurrently \"npm run backStart\" \"npm run frontStart\" ",
+    "start": " \"npm run backStart\" && \"npm run frontStart\" ",
     "frontStart": "cd client && npm start",
     "frontSetup": "cd client && npm install && npm run build",
     "backStart": "cd server && npm start",
