@@ -8,7 +8,8 @@ const register = require('./controllers/register');
 const signIn = require('./controllers/signin');
 require('dotenv').config();
 
-const PORT = process.env.PORT;
+// config port
+const PORT = process.env.PORT || 5000;
 const app = express();
 
 app.use(express.urlencoded({extended: false}));
@@ -35,6 +36,7 @@ app.post('/signin', signIn.handleSignIn(db,bcrypt)); // receives req and res in 
 
 app.post('/register',(req,res) => register.handleRegister(req,res,db,bcrypt)); // dependency injection: passing required objects so we don't need to import them
 
-app.listen(PORT || 3001,() => {
+app.listen(PORT || 5000,() => {
     console.log(`Application is running on Port ${PORT}`);
+    console.log('HELLO WORLD!');
 });
