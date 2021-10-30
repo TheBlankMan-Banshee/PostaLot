@@ -12,7 +12,7 @@
   },
   "scripts": {
     "start": " npm run backStart",
-    "frontStart": "cd client && npm start",
+    "frontStart": "npm start",
     "frontSetup": "cd client && npm install && npm run build",
     "backStart": "cd server && npm start",
     "backSetup": "cd server && npm install",
